@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>battle_of_neighborhoods.utf8.md</title>
+    <meta charset="utf-8" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/rladies-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/css/progress.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/adds.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: inverse, left, middle
+
+background-image: url(resources/images/cover.gif)
+background-size: cover
+
+# Battle of Neighborhoods
+
+&lt;img src="resources/images/coursera-logo.png" width="200px"/&gt;
+
+.large[Coursera Capstone Project | Thiago Pires]
+
+---
+layout: true
+
+background-image: url(resources/images/coursera-logo.png)
+background-position: 97% 3%
+background-size: 10%
+
+---
+# Introduction
+
+**Rio de Janeiro** is recognized as a wonderful city and there are several attractions for tourists. The metropolitan area is usually selected as a major travel destination, however outside the capital there are interesting places to visit.
+
+The purpose of this study is to select a location in the state of Rio de Janeiro in order to rent a vacation home. The main selected locations are not in the state capital, but include the region of the lakes (*Lagos*), mountains (*Serrana*) and *Bahia da Ilha Grande*.
+
+---
+# Data
+
+Brazilian Institute of Geography and Statistics (IBGE in Portuguese) data were used to **identify spatial coordinates**. Foursquare data will also be used to **identify the main resources of cities**.
+
+---
+# Methodology
+
+In order to segment the locations, **Kmeans** was used. An **unsupervised machine learning technique** that can help us verify what **similarities** exist between locations. The variables used to analyze the similarities of these regions were the **venues** extracted from the proximity with the spatial coordinates provided for each region.
+
+---
+# Results
+
+The full list from regions to analysis is below
+
+&lt;img src="resources/images/table1.png" width="322" height="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Results
+
+Following is the map with all locations
+
+&lt;img src="resources/images/map1.png" width="762" height="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Cluster neighborhoods
+
+The map with all locations aggregated in clusters *pos* kmeans
+
+&lt;img src="resources/images/map2.png" width="762" height="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Examine clusters
+
+### Cluster 0
+
+&lt;img src="resources/images/cluster0.png" width="831" height="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Examine clusters
+
+### Cluster 1
+
+&lt;img src="resources/images/cluster1.png" width="844" height="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Examine clusters
+
+### Cluster 2 and 3
+
+&lt;img src="resources/images/cluster2.png" width="839" height="80%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="resources/images/cluster3.png" width="820" height="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Examine clusters
+
+### Cluster 4 and 5
+
+&lt;img src="resources/images/cluster4.png" width="828" height="80%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="resources/images/cluster5.png" width="825" height="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Examine clusters
+
+### Cluster 6
+
+&lt;img src="resources/images/cluster61.png" width="835" height="80%" style="display: block; margin: auto;" /&gt;
+
+---
+### Cluster 6 (continue)
+
+&lt;img src="resources/images/cluster62.png" width="833" height="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Discussion
+
+Seven clusters were selected. Clusters 1 and 6 are the ones that added more localities. They are clusters that concentrate the most visited cities in these selected regions.
+
+### Cluster 1
+
+- In Abraão there are a lot of options of **hotels ans hostels**, you can stay there by **little money**. There are also good beach options.
+- Arraial do Cabo is a great place. There is wonderful beaches and there may be more cheaper than Cabo Frio and Búzios (nearby places).
+
+Cluster 1 there are more locations near a beach and can be more cheaper than locations in cluster 6
+
+---
+# Discussion
+
+### Cluster 6
+
+- Paraty was interesting because it contains diverse places, such as: beach, historic places, bookstores.
+- To get a european experience in Brazil, Petrópolis is a nice place to go. Chocolate shop and German Restaurante as main options.
+- Cabo Frio and Búzios are great places, but they are very expensive.
+
+Cluster 6 has higher cost locations, such as restaurants specializing in international dishes.
+
+The other places, by the my experience look less interesting to visit.
+
+---
+# Conclusion
+
+Really, Rio de Janeiro is an excellent place, with several options: from the beach or the mountains. There are places for all tastes. Even very interesting places you can spend a lot less money. 
+
+---
+class: center middle
+background-color: #000000
+
+[&lt;font color="white"&gt;github.com/th1460/Coursera_Capstone&lt;/font&gt;](https://github.com/th1460/Coursera_Capstone)
+
+
+```
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div>"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
